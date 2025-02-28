@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Basis Grotesque Pro";
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #0F0D0D;
+}
+
+/* Purple overlay */
+#purple {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #EDBFFF;
+    opacity: 0;
+    display: none;
+    transition: opacity ease 1s;
+}
+
+/* Custom cursor */
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: difference;
+}
+
+/* Main section */
+.main {
+    background-color: #0F0D0D;
+    cursor: none;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+/* Navigation */
+#nav {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    mix-blend-mode: difference;
+    z-index: 102;
+}
+
+#nav h1 {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 30px;
+}
+
+#nav-part2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nav-part2 a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#nav-part3 {
+    position: absolute;
+    right: 30px;
+}
+
+#nav #circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Content container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Adjusted text column */
+.text-left, .text-right {
+    font-size: 1rem; /* Reduced font size */
+    max-width: 400px; /* Increased width to accommodate text */
+    text-align: left; /* Aligns text properly */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Image */
+.image-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+/* Footer Name Styling */
+.footer-name {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 10rem; /* Large text */
+    font-family: "Dancing Script", cursive; /* Aesthetic cursive font */
+    color: white; /* White with slight opacity */
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 99;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Social Media Icons */
+.social-links {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    color: #EDBFFF; /* Changes color on hover */
+    transform: scale(1.2); /* Slightly enlarges icon */
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-left, .text-right {
+        max-width: 100%;
+        text-align: center;
+    }
+}

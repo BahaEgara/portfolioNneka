@@ -1,0 +1,76 @@
+/* Prevents scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(119, 73, 68);
+}
+
+/* Main container for the page */
+.birthday-page {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Left-side image covering full height */
+.left-image {
+    width: 50%;
+    height: 100%;
+}
+
+.left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+}
+
+/* Right side containing image and text */
+.right-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Right-side image - Adjusted to prevent cropping */
+.right-image {
+    width: 40%; /* Reduced width to make it smaller */
+    height: auto; /* Ensures it maintains aspect ratio */
+    object-fit: contain; /* Ensures the full image is visible */
+    margin-bottom: 30px; /* Adds space between the image and horizontal line */
+}
+
+/* Text container */
+.text-container {
+    width: 80%;
+}
+
+/* Horizontal lines */
+.horizontal-line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(69, 43, 121);
+    margin: 20px 0; /* Adds space above and below the text */
+}
+
+/* Text styling */
+.text-container p {
+    font-size: 1.45rem;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    color: rgb(69, 43, 121);
+
+}
+
+.text-container h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: palevioletred;
+
+}
